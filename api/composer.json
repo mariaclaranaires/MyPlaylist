@@ -1,0 +1,17 @@
+{
+    "name": "55639/api",
+    "autoload": {
+        "psr-4": {
+            "controller\\": "src/controller",
+            "model\\": "src/model",
+            "connection\\": "src/connection"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maria Clara Nazareno Aires",
+            "email": "claranaires@gmail.com"
+        }
+    ],
+    "require": {}
+}
