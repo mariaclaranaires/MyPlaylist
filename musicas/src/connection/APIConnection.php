@@ -16,7 +16,12 @@ class APIConnection {
 
         if ($method === "POST") { 
             curl_setopt ($requisicao, CURLOPT_POST, 1);
-        } 
+        } elseif ($method === "GET"){
+            curl_setopt ($requisicao, CURLOPT_HTTPGET, 1);
+        }else{
+            $error_message = "Método não permitido";
+            return $error_message;
+        }
 
         $response = curl_exec($requisicao);
         

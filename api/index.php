@@ -23,4 +23,21 @@ if ($method == 'POST'){
                 "message" => "Rota $url nao encontrada"
         ]));
     }
+}elseif ($method == 'GET'){
+    switch ($url){
+        case '/musicas/listar':
+            $musicaController = new controller\MusicaController();
+            $response =  $musicaController -> getMusicas();
+            echo $response;
+            break;
+        default:
+           echo (json_encode($data = [
+                    "status" => 404,
+                    "message" => "Rota $url nao encontrada"
+            ]));
+            
+    }
+}else{
+        header ("HTTP/1.0 404 Page Not Allowed");
+        echo (json_encode ($response));
 }

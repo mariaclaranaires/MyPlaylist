@@ -13,4 +13,12 @@ class Musica {
         return isset($resultado[0]) ? $resultado : 0;
 
     }
+
+    public function getMusicas() {
+        $connection = new Connection();
+        $resultado = $connection -> getConnection()->query("SELECT * FROM musicas");
+        $resultado = $resultado -> fetchAll (PDO::FETCH_ASSOC);
+        return isset($resultado[0]) ? $resultado : 0;
+
+    }
 }

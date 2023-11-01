@@ -38,4 +38,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $musicaController = new MusicaController();
     $data = $musicaController->insertMusica($musica, $artista, $estilo);
 } 
+  elseif(isset($_GET['listar'])) {
+            $musicaController = new MusicaController();
+            $musicas = $musicaController->getMusicas();
+            $musicas = json_decode($musicas);
+
+            if($musicas) {
+                echo '<h2>Playlist atual</h2>';
+                echo '<table style="border:1px solid black; width:25%">';
+                echo '<tr>';
+                echo '<th style="border:1px solid black">Música</th>';
+                echo '<th style="border:1px solid black">Artista</th>';
+                echo '<th style="border:1px solid black">Estilo</th>';
+                echo '</tr>';
+                foreach ($musicas as $musica) {
+                  echo '<tr>';
+                  echo '<td style="border:1px solid black">'. $musica->musica. '</td>';
+                  echo '<td style="border:1px solid black">'. $musica->artista. '</td>'; 
+                  echo '<td style="border:1px solid black">'. $musica->estilo. '</td>';  
+                  echo '</tr>';
+              }
+              echo '</table>';
+            } else {
+              echo '<p>Playlist vazia</p>';
+            }
+
+
+        }
 ?>
