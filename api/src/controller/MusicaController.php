@@ -20,4 +20,10 @@ class MusicaController {
         }
     }
 
+    public function getMusicas() {
+        $musica = new Musica();
+        $musicas = $musica->getMusicas();
+        $musicas = json_encode($musicas);
+        return $musicas;
+    }
 }
