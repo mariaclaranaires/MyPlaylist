@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '55639/myplaylist',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '309be3b2cb37240f7ed231f01e3c6b0163bd31e8',
+        'pretty_version' => 'dev-develop',
+        'version' => 'dev-develop',
+        'reference' => '8a9b97c60b579ce11569386b50df14252e007aa6',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '55639/myplaylist' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '309be3b2cb37240f7ed231f01e3c6b0163bd31e8',
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
+            'reference' => '8a9b97c60b579ce11569386b50df14252e007aa6',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
