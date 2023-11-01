@@ -1,0 +1,16 @@
+{
+    "name": "55639/myplaylist",
+    "autoload": {
+        "psr-4": {
+            "controller\\": "src/controller",
+            "connection\\": "src/connection"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maria Clara Nazareno Aires",
+            "email": "claranaires@gmail.com"
+        }
+    ],
+    "require": {}
+}
