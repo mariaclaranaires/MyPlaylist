@@ -12,4 +12,11 @@ class MusicaController {
         echo "$response";
         return $response; 
     }
+
+    public function getMusicas() {
+        $api = new APIConnection();
+        $url = "/musicas/listar";
+        $response = $api->requestApi($url, "GET");
+        return $response; 
+    }
 }
